@@ -89,7 +89,7 @@ public class ClienteService {
 	}
 	
 	public Cliente fromDTO(ClienteDTO objDto) {
-		return new Cliente(objDto.getId(), objDto.getNome(), objDto.getEmail(), null, null);
+		return new Cliente(objDto.getId(), objDto.getNome(), objDto.getEmail(), null);
 	}
 	
 	private void updateDate(Cliente newObj, Cliente obj) {
@@ -98,7 +98,7 @@ public class ClienteService {
 	}
 	
 	public Cliente fromDTO(ClienteNewDTO objDto) {
-		Cliente cli = new Cliente(null, objDto.getNome(), objDto.getEmail(), objDto.getCpf(), pe.encode(objDto.getSenha()));
+		Cliente cli = new Cliente(null, objDto.getNome(), objDto.getEmail(), objDto.getCpf());
 		cli.getTelefones().add(objDto.getTelefone1());
 		if(objDto.getTelefone2()!=null) {
 			cli.getTelefones().add(objDto.getTelefone2());

@@ -2,10 +2,9 @@ package com.biotechacademia.domain;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,7 +13,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Exercicio implements Serializable {
@@ -23,18 +23,19 @@ public class Exercicio implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
+	@Column(unique=true)
 	private String nome;
 	
+	@JsonIgnore
 	@ManyToMany
 	@JoinTable(name="EXERCICIO_CATEGORIA", joinColumns = @JoinColumn(name = "exercicio_id"), inverseJoinColumns = @JoinColumn(name = "categoria_id"))
 	private List<Categoria> categorias = new ArrayList<>();
 	
+	@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name="cliente_id")
 	private Cliente cliente;
-	
-	@OneToMany(mappedBy="id.cliente")
-	private Set<ItemLista> itens = new HashSet<>();
 	
 	public Exercicio() {
 		
@@ -79,14 +80,6 @@ public class Exercicio implements Serializable {
 		this.cliente = cliente;
 	}
 	
-	public Set<ItemLista> getItens() {
-		return itens;
-	}
-
-	public void setItens(Set<ItemLista> itens) {
-		this.itens = itens;
-	}
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -111,5 +104,4 @@ public class Exercicio implements Serializable {
 			return false;
 		return true;
 	}
-	
 }

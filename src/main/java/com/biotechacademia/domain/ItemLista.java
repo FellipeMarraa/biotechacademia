@@ -1,7 +1,6 @@
 package com.biotechacademia.domain;
 
 import java.io.Serializable;
-import java.util.Date;
 
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
@@ -34,7 +33,7 @@ public class ItemLista implements Serializable {
 		this.id = id;
 	}
 	
-	@JsonIgnore
+
 	public Exercicio getExercicio() {
 		return id.getExercicio();
 	}
@@ -68,19 +67,5 @@ public class ItemLista implements Serializable {
 			return false;
 		return true;
 	}
-
-	public void setInstante(Date date) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void setCliente(Cliente find) {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	
-	
-
 	
 }

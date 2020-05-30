@@ -1,8 +1,6 @@
 package com.biotechacademia.domain;
 
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 
 import javax.persistence.Embeddable;
 import javax.persistence.JoinColumn;
@@ -19,8 +17,6 @@ public class ItemListaPK implements Serializable {
 	@ManyToOne
 	@JoinColumn(name="cliente_id")
 	private Cliente cliente;
-	
-	private Set<ItemLista> itens = new HashSet<>();
 	
 	public Exercicio getExercicio() {
 		return exercicio;
@@ -62,14 +58,7 @@ public class ItemListaPK implements Serializable {
 		} else if (!exercicio.equals(other.exercicio))
 			return false;
 		return true;
-	}
-	public Set<ItemLista> getItens() {
-		return itens;
-	}
-	public void setItens(Set<ItemLista> itens) {
-		this.itens = itens;
-	}
 	
 	
-	
+	}	
 }

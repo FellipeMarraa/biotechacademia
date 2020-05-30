@@ -6,7 +6,6 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 
 import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.br.CPF;
 
 import com.biotechacademia.services.validation.ClienteInsert;
 
@@ -22,8 +21,6 @@ public class ClienteNewDTO implements Serializable {
 	@Email(message="Email invalido")
 	private String email;
 	
-	@NotEmpty(message="Preenchimento obrigatorio")
-	@CPF
 	private String cpf;
 	
 	@NotEmpty(message="Preenchimento obrigatorio")

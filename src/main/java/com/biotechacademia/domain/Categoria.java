@@ -22,6 +22,7 @@ public class Categoria implements Serializable{
 	@ManyToMany(mappedBy = "categorias")
 	private List<Exercicio> exercicios = new ArrayList<>();
 	
+	
 	public Categoria() {
 		
 	}

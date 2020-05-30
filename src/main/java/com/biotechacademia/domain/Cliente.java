@@ -31,7 +31,6 @@ public class Cliente implements Serializable{
 	
 	@Column(unique=true)
 	private String email;
-	private String cpf;
 	
 	@JsonIgnore
 	private String senha;
@@ -48,20 +47,19 @@ public class Cliente implements Serializable{
 	@CollectionTable(name="PERFIS")
 	private Set<Integer> perfis = new HashSet<>();
 	
-	@JsonIgnore
-	@OneToMany(mappedBy="id.exercicio")
+
+	@OneToMany(mappedBy="id.cliente")
 	public Set<ItemLista> itens = new HashSet<>();
 	
 	public Cliente() {
 		addPerfil(Perfil.CLIENTE);
 	}
 
-	public Cliente(Integer id, String nome, String email, String cpf, String senha) {
+	public Cliente(Integer id, String nome, String email, String senha) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
-		this.cpf = cpf;
 		this.senha = senha;
 		addPerfil(Perfil.CLIENTE);
 	}
@@ -90,14 +88,6 @@ public class Cliente implements Serializable{
 		this.email = email;
 	}
 
-	public String getCpf() {
-		return cpf;
-	}
-
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-
 	public String getSenha() {
 		return senha;
 	}
@@ -113,7 +103,6 @@ public class Cliente implements Serializable{
 	public void addPerfil(Perfil perfil) {
 		perfis.add(perfil.getCod());
 	}
-	
 	@JsonIgnore
 	public List<Exercicio> getExercicios() {
 		for(ItemLista x : itens) {
@@ -125,6 +114,8 @@ public class Cliente implements Serializable{
 	public void setExercicios(List<Exercicio> exercicios) {
 		this.exercicios = exercicios;
 	}
+	
+	
 
 	public Set<String> getTelefones() {
 		return telefones;
