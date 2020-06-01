@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viwerport" content="width=device-width, initial-scale=1">
+	<title>BioTech</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+</head>
+
+<body>
+	<div id="geral">
+		<div id="cabecalho">
+			<img id="logo" src="img/download.jpg">
+		</div>
+	<header>
+			<button class="log" type="button">
+				<img id="button" src="img/avatar.png" title="Login">
+			</button>
+			<input id="divBusca" type="text" id="txtBusca" placeholder=" #0000 " />
+			</div>
+		</div>
+	</header>
+	<div id="center">
+		
+	</div>
+
+	<div id="direita">
+		<div class="form">
+			<button type="button">
+			<img id="avatar" src="img/avatar.png">
+		</button>
+			<h1>Login</h1>
+			<form action="chamados.html">
+				<div class="input-field login">
+					<input id="user" type="text" class="validate">
+					<label for="user">Usuário</label>
+				</div>
+				<div class="input-field login">
+					<input id="senha" type="password" class="validate">
+					<label for="senha">Senha</label>
+				</div>
+				<input type="submit" name="submit" value="Login">
+				<a href="#">Esqueci minha senha</a>
+			</form>
+		</div>
+	</div>
+	<div id="esquerda">
+
+	</div>
+</div>
+</body>
+
+</html>

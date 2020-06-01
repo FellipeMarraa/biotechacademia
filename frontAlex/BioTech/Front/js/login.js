@@ -1,0 +1,10 @@
+$(function(){
+    $('.log').click(function(){
+        $('.form').toggle('fast');
+    });
+});
+$(function(){
+    $('#avatar').click(function(){
+        $('.form').hide('fast');
+    });
+});

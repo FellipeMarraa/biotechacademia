@@ -1,0 +1,229 @@
+/*template*/
+#centro {
+    float:left;
+    width:50%;
+    height: 850px;
+    margin-left:20%;
+    background-color: white;
+    }
+#esquerda {
+    float:left;
+    width:20%;
+    height: 850px;
+    margin-left:-60%;
+    background-color: white;
+    }
+#direita {
+    float:left;
+    width:20%;
+    height: 850px;
+    background-color: white;
+    }
+#cabecalho{
+    margin-top: 20px;
+    float:left;
+    width:80%;
+    height: 100px;
+    margin-left:10%;
+    background-color: #000000;
+}
+/*login*/
+#logo{
+    margin-left: 25px;
+    margin-top: 18px;
+    width: 130px;
+    height: 60px;
+}
+.log{
+    width: 65px;
+    height: 35px;
+    margin-top: 32px;
+    margin-right: 25px;
+    border-color: #000000;
+    background-color: #fff;
+    border-radius: 15px;
+    float: right;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.log:hover{
+    border: solid;
+    border-color: white;
+    background-color: orangered;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#divBusca{
+    float: right;
+    margin-top: 35px;
+    margin-right: 15px;
+}
+.form{
+    display: none;
+    border: 1px solid #e64a19; 
+    border-top: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.form p{
+    margin: 0;
+    padding: 0;
+	font-weight: bold;
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.form input{
+    width: 100%;
+	margin-bottom: 20px;
+	color: #000000;
+}
+.form input[type="text"], input[type="password"]
+{
+	border: solid;
+	border-color: #e64a19;
+    border-bottom: solid #e64a19;
+    border-right: 1px solid #fff;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #000000;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.form input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #e64a19;
+    color: #000000;
+    font-size: 18px;
+	border-radius: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.form input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #ed805e;
+    color: #000000;
+}
+.form a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #000000;
+}
+.form a:hover
+{
+    color: #e64a19;
+}
+
+#logar{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#cadastrarse{
+    margin-left: 82px;
+}
+/* cadastro */
+.cadastro-box{
+      width: 370px;
+      height: 470px;
+      background: #fff;
+      color: #000;
+      border: 1px solid #e64a19;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      padding: 70px 30px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+.cadastro-box h1{
+      margin: 0;
+      padding: 0 0 20px;
+      text-align: center;
+      font-size: 22px;
+
+  }
+.cadastro-box p{
+      margin: 0;
+      padding: 0;
+      font-weight: bold;
+  }
+.cadastro-box input{
+      width: 100%;
+      margin-bottom: 20px;
+  }
+.cadastro-box input[type="email"], input[type="url"]
+  {
+      border: none;
+      border-bottom: 1px solid #000;
+      background: transparent;
+      outline: none;
+      height: 40px;
+      color: #000;
+      font-size: 16px;
+  }
+.cadastro-box input[type="submit"]
+  {
+      border: none;
+      outline: none;
+      height: 40px;
+      background: #e64a19;
+      color: #fff;
+      font-size: 18px;
+      border-radius: 20px;
+  }
+.cadastro-box input[type="submit"]:hover
+  {
+      cursor: pointer;
+      background: #e64a19;
+      color: #000;
+      border: 2px solid #000;
+  }
+  
+.cadastro-box a{
+      text-decoration: none;
+      font-size: 14px;
+      color: #000;
+      margin-left: 135px;
+  }
+.cadastro-box a:hover
+  {
+      color: #e64a19;
+  }
+  
+.cadastro input:focus {
+    border-bottom: 1px solid #e64a19 !important;
+    box-shadow: 0 1px 0 0 #e64a19 !important
+  }
+  
+.cadastro input:focus + label {
+    color: #e64a19 !important;
+  }
+  
+.row .input-field textarea:focus {
+    border-bottom: 1px solid #e64a19 !important;
+    box-shadow: 0 1px 0 0 #e64a19 !important
+  }
+  
+.input-field textarea:focus + label {
+    color: #e64a19 !important;
+  }
+.avatar{
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 130px;
+    height: 60px;
+}
+#logavatar{
+    width: 370px;
+    height: 75px;
+    position: absolute;
+    background-color: #000;
+    top: -30px;
+    left: calc(50% - 185px);
+} 

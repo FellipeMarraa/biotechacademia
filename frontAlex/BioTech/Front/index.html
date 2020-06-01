@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tela Login</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../Front/js/login.js"></script>
+    
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="cabecalho">
+        <img id="logo" src="../img/Logo.jpeg">
+        <button class="log" type="button">Login</button>
+        <input id="divBusca" type="text" id="txtBusca" placeholder=" #Código Categoria " />
+    </div>
+    <div id="centro">
+        
+    </div>
+    <div id="esquerda"></div>
+    <div id="direita">
+        <div class="form">
+			<form action="chamados.html">
+				<div class="input-field login">
+                    <label for="user">Usuário</label>
+					<input id="user" type="text" class="validate" placeholder="E-mail">
+				</div>
+				<div class="input-field login">
+                    <label for="senha">Senha</label>
+					<input id="senha" type="password" class="validate" placeholder="*******">
+				</div>
+                <input id="logar" type="submit" name="submit" value="Login">
+                <a id="cadastrarse" href="#">Cadastrar-se</a>
+			</form>
+		</div>
+    </div>
+</body>
+</html>
